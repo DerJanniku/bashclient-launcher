@@ -19,8 +19,8 @@ class BashClientLauncher(tk.Tk):
         self.mods_button = tk.Button(self, text="Install Mods", command=self.install_mods)
         self.mods_button.pack(pady=10)
         
-        self.mod_manager_button = tk.Button(self, text="Open Mod Manager", command=self.open_mod_manager)
-        self.mod_manager_button.pack(pady=10)
+        self.translator_button = tk.Button(self, text="Run Auto-Translator", command=self.run_translator)
+        self.translator_button.pack(pady=10)
         
     def launch_bashclient(self):
         try:
@@ -44,11 +44,13 @@ class BashClientLauncher(tk.Tk):
         except Exception as e:
             messagebox.showerror("Error", f"Failed to install mods: {e}")
     
-    def open_mod_manager(self):
+    def run_translator(self):
         try:
-            subprocess.Popen(["python", "open_mod_manager.py"])
+            translator_path = os.path.join(os.getcwd(), "translations", "run_translator.py")
+            subprocess.Popen(["python", translator_path])
+            messagebox.showinfo("Success", "Auto-Translator started successfully!")
         except Exception as e:
-            messagebox.showerror("Error", f"Failed to open Mod Manager: {e}")
+            messagebox.showerror("Error", f"Failed to start Auto-Translator: {e}")
 
 if __name__ == "__main__":
     app = BashClientLauncher()
