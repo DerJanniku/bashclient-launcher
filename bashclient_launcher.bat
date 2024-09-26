@@ -6,13 +6,13 @@ echo Welcome to BashClient Launcher!
 echo.
 echo 1. Launch BashClient
 echo 2. Install Mods
-echo 3. Open Mod Manager
+echo 3. Run Auto-Translator
 echo 4. Exit
 set /p choice=Enter your choice: 
 
 if %choice%==1 goto launch
 if %choice%==2 goto install_mods
-if %choice%==3 goto open_mod_manager
+if %choice%==3 goto run_translator
 if %choice%==4 goto exit
 goto menu
 
@@ -27,9 +27,9 @@ xcopy /Y /E "mods\*" "%APPDATA%\.minecraft\mods\"
 echo Mods installed successfully!
 goto menu
 
-:open_mod_manager
-echo Opening Mod Manager...
-start "" "java" "-jar" "target/bashclient-launcher-1.0-SNAPSHOT-jar-with-dependencies.jar"
+:run_translator
+echo Running Auto-Translator...
+start "" "python" "translations\run_translator.py"
 goto menu
 
 :exit
