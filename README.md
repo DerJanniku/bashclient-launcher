@@ -1,13 +1,16 @@
 
 # BashClient Launcher
 
-BashClient Launcher is a custom Minecraft launcher for Windows that provides improved performance and includes small mods similar to Badlion, LabyMod, and Luna.
+BashClient Launcher is a custom Minecraft launcher for Windows that provides improved performance and includes small mods similar to Badlion, LabyMod, and LunarClient.
 
 ## Features
 
 - Launch the custom Minecraft client "BashClient"
 - Install mods to the Minecraft mods directory
-- Simple and user-friendly interface
+- Load custom mods
+- Open Mod Manager
+- Open Installer
+- Open Marketplace
 
 ## Requirements
 
@@ -41,8 +44,17 @@ BashClient Launcher is a custom Minecraft launcher for Windows that provides imp
 2. Install Mods:
    - Select option `2` to install mods to the Minecraft mods directory.
 
-3. Exit:
-   - Select option `3` to exit the launcher.
+3. Load Custom Mods:
+   - Select option `3` to load custom mods.
+
+4. Open Mod Manager:
+   - Select option `7` to open the Mod Manager.
+
+5. Open Installer:
+   - Select option `8` to open the Installer.
+
+6. Open Marketplace:
+   - Select option `9` to open the Marketplace.
 
 ## Contributing
 
