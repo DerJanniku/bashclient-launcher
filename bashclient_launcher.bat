@@ -29,7 +29,7 @@ goto menu
 
 :open_mod_manager
 echo Opening Mod Manager...
-start "" "python" "open_mod_manager.py"
+start "" "java" "-jar" "target/bashclient-launcher-1.0-SNAPSHOT-jar-with-dependencies.jar"
 goto menu
 
 :exit

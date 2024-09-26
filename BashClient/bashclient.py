@@ -1,0 +1,2 @@
+
+print("BashClient started")

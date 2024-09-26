@@ -19,6 +19,9 @@ class BashClientLauncher(tk.Tk):
         self.mods_button = tk.Button(self, text="Install Mods", command=self.install_mods)
         self.mods_button.pack(pady=10)
         
+        self.mod_manager_button = tk.Button(self, text="Open Mod Manager", command=self.open_mod_manager)
+        self.mod_manager_button.pack(pady=10)
+        
     def launch_bashclient(self):
         try:
             bashclient_path = os.path.join(os.getcwd(), "BashClient", "bashclient.exe")
@@ -40,6 +43,12 @@ class BashClientLauncher(tk.Tk):
             messagebox.showinfo("Success", "Mods installed successfully!")
         except Exception as e:
             messagebox.showerror("Error", f"Failed to install mods: {e}")
+    
+    def open_mod_manager(self):
+        try:
+            subprocess.Popen(["python", "open_mod_manager.py"])
+        except Exception as e:
+            messagebox.showerror("Error", f"Failed to open Mod Manager: {e}")
 
 if __name__ == "__main__":
     app = BashClientLauncher()
