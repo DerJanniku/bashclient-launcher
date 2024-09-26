@@ -1,0 +1,2 @@
+com/bashclient/minecraft/MinecraftClient.java
+ com.bashclient.minecraft.MinecraftClient

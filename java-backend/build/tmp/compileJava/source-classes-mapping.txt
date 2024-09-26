@@ -1,0 +1,2 @@
+com/bashclient/Main.java
+ com.bashclient.Main
