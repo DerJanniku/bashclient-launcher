@@ -6,12 +6,14 @@ echo Welcome to BashClient Launcher!
 echo.
 echo 1. Launch BashClient
 echo 2. Install Mods
-echo 3. Exit
+echo 3. Open Mod Manager
+echo 4. Exit
 set /p choice=Enter your choice: 
 
 if %choice%==1 goto launch
 if %choice%==2 goto install_mods
-if %choice%==3 goto exit
+if %choice%==3 goto open_mod_manager
+if %choice%==4 goto exit
 goto menu
 
 :launch
@@ -23,6 +25,11 @@ goto menu
 echo Installing Mods...
 xcopy /Y /E "mods\*" "%APPDATA%\.minecraft\mods\"
 echo Mods installed successfully!
+goto menu
+
+:open_mod_manager
+echo Opening Mod Manager...
+start "" "python" "open_mod_manager.py"
 goto menu
 
 :exit
